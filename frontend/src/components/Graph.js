@@ -2,7 +2,7 @@ import React from 'react';
 import {Line} from 'react-chartjs-2'
 
 
-
+import "./Graph.css";
 function Graph(){
     const data = {
         labels : ['Mars','avril','mai','juin'],

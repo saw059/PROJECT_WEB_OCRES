@@ -6,7 +6,9 @@ import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter, Switch ,Route} from 'react-router';
 import admin from './admin';
+/*
 const Root =() =>(
+    
     <BrowserRouter>
         <switch>
         <Route exact path='/' component={App}/>
@@ -18,8 +20,9 @@ const Root =() =>(
 
 
     </BrowserRouter>
-    
-)
+    )
+    */
+
 
 
 

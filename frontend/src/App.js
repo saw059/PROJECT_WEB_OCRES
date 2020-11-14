@@ -22,9 +22,11 @@ class App extends Component{
 
         </div>
         <div className='chart'>
+        <p>hello evryone</p>
+        <Graph /> 
        
         </div>
-        <p>hello evryone</p>
+
         
       </div>
 

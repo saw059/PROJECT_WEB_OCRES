@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 
 
 import Toolbar from './components/plan/Toolbar';
-import Graph from './components/Graph.js';
+
 
 class admin extends Component{
 
@@ -17,8 +17,8 @@ class admin extends Component{
           </main>
 
         </div>
-        <div className='chart'>
-            <Graph/>
+        <div className='formulaire'>
+            
        
 
 

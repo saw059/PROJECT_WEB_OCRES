@@ -15,7 +15,7 @@ const toolbar = props => (
                 <ul>
                     
                     
-                    <li>Admin</li>
+                    <li><a href="">Admin</a></li>
                     
                 </ul>
 
