@@ -12,23 +12,25 @@ class App extends Component{
     return(
       
       <div className='App'>
-        
-
         <div className="architecture">
           <Toolbar />
-          <main style={{marginTop:'60px'}}>
+        </div>
+          
+          <main >
+          <div className='chart'>
+            <Graph />
+        
+       
+         </div>
+
 
           </main>
 
         </div>
-        <div className='chart'>
-        <p>hello evryone</p>
-        <Graph /> 
-       
-        </div>
+        
 
         
-      </div>
+      
 
     );
   }

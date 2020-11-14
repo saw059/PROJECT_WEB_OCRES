@@ -5,6 +5,7 @@
     width: 100%;
     background: rgb(14, 3, 3);
     height: 56px;
+    border-bottom:solid 0.4px white;
 
 }
 .toolbar_nav{

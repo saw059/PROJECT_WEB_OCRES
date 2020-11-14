@@ -10,7 +10,7 @@ function Graph(){
         datasets :[
             {
                 label : 'nombre de cas',
-                data : [20,30,10,50]
+                data : [20,30,40,25]
 
 
             }
