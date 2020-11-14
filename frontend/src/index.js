@@ -4,6 +4,25 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { BrowserRouter, Switch ,Route} from 'react-router';
+import admin from './admin';
+const Root =() =>(
+    <BrowserRouter>
+        <switch>
+        <Route exact path='/' component={App}/>
+        <Route path='/admin' component={admin}/>
+    
+
+
+    </switch>
+
+
+    </BrowserRouter>
+    
+)
+
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

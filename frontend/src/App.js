@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
+import {Router, Route} from "react-router"; 
 import './App.css';
+import Toolbar from './components/plan/Toolbar';
+import Graph from './components/Graph'
+import admin from "./admin";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+
+  render(){
+
+    return(
+      
+      <div className='App'>
+        
+
+        <div className="architecture">
+          <Toolbar />
+          <main style={{marginTop:'60px'}}>
+
+          </main>
+
+        </div>
+        <div className='chart'>
+       
+        </div>
+        <p>hello evryone</p>
+        
+      </div>
+
+    );
+  }
 }
-
 export default App;

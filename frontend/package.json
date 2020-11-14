@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "chart.js": "^2.9.4",
+    "react": "^16.14.0",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "^16.14.0",
+    "react-router": "^5.2.0",
+    "react-scripts": "^4.0.0",
+    "recharts": "^1.8.5",
+    "zingchart-react": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,9 +36,9 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addon-links": "^5.2.6",
-    "@storybook/addons": "^5.2.6",
-    "@storybook/react": "^5.2.6"
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/addons": "^6.0.28",
+    "@storybook/react": "^6.0.28"
   }
 }
