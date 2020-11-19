@@ -1,35 +1,64 @@
-import React from 'react';
-import {Line} from 'react-chartjs-2'
-
+import React, { useState, useEffect } from 'react';
+import { Pie,Scatter} from 'react-chartjs-2';
+import { dailydata } from '../API/ApiCovid';
 
 import "./Graph.css";
-function Graph(){
-    const data = {
-        labels : ['Mars','avril','mai','juin'],
 
-        datasets :[
-            {
-                label : 'nombre de cas',
-                data : [20,30,40,25]
+const Graph = ({data : {confirmed,recovered,deaths},country}) => {
+    const [dailyydata, setdailydata] = useState([]);
 
+    useEffect(() => {
+        const Fetchapi = async () => {
+            setdailydata(await dailydata());
+        }
 
-            }
-            
-        ]
+        // console.log(dailyydata);
 
+        Fetchapi();
+    }, []);
+    const Linechart = (
+        dailyydata.length ?
+            (<Scatter
+                data={{
+                    labels:['Infected','Recovered', 'Deaths'],
+                    datasets:[{
+                        label:'people',
+                        backgroundColor:['blue','green','red'],
+                        data:[confirmed.value , recovered.value, deaths.value]
+                    }]
+                }}
+                options={{
+                    legend:{display:false},
+                    title:{display:true , text:`Current state in ${country}`},
+                }}
+            />) : null
+    );
 
+    const Barchart =(
+confirmed?
+<Pie
+data={{
+    labels:['Infected','Recovered', 'Deaths'],
+    datasets:[{
+        label:'people',
+        backgroundColor:['blue','green','red'],
+        data:[confirmed.value , recovered.value, deaths.value]
+    }]
+}}
+options={{
+    legend:{display:false},
+    title:{display:true , text:`Current state in ${country}`},
+}}
+/>
+:null
+    );
 
-    }
-        
-          
-      
-    return <Line data={data} />
-        
-
-
+    return (
+       <div className="graph">
+    {country ? Barchart : Linechart}
+       </div>
+    )
 }
-  
-
    
 
 export default Graph;

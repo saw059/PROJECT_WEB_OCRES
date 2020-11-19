@@ -10,20 +10,10 @@ class admin extends Component{
 
     return(
       <div className='admin'>
-        <div className="architecture">
+        
           <Toolbar />
-          <main style={{marginTop:'64px'}}>
-
-          </main>
-
-        </div>
-        <div className='formulaire'>
-            
-       
-
-
-        </div>
-        <p>hello world</p>
+          
+        <p color="red">hello world</p>
         
         
       </div>

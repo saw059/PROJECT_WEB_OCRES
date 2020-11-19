@@ -1,3 +1,56 @@
-.Graph{
-    width: 300px;
+.graph{
+    display: flex;
+    
+    justify-content: center;
+    text-align: center;
+  
+  margin-top: 6%;
+  box-shadow:0 10px 15px gray;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  border-radius: 10px;
+  height: 100%;
+  padding: 40px;
+  padding-bottom: 50px;
+  background-color: rgba(22, 29, 119, 0.637);
+ 
+  
+}
+
+.graph:hover{
+
+  transform: scale(1.2,1.2);
+  background-color: rgb(21, 20, 63);
+  padding-bottom: 50px;
+  
+  
+  
+}
+.moteur{
+  display: flex;
+  
+  justify-content: center;
+  text-align: center;
+
+  margin-top: 6%;
+  box-shadow:0 10px 15px gray;
+  width: 50%;
+  
+  margin-left: 25%;
+  margin-right: 25%;
+
+
+  border-radius: 10px;
+  
+  background-color:rgba(255, 255, 255, 0.116);
+
+
+}
+.moteurI{
+  color: azure;
+  width: 100%;
+  background-color: rgba(22, 29, 119, 0.637);
+  
 }

@@ -1,0 +1,33 @@
+.pays{
+    
+    text-shadow: whitesmoke;
+    width: 500px;
+    
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-align: center;
+     
+    
+    
+    
+    }
+    .pays:hover{
+        color: white;
+    }
+    .pays option{
+        color: white;
+
+    }
+    .pays select{
+        background-color:rgb(34, 32, 146);
+        color: white;
+        margin-left: auto;
+        width: 300px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow:0 0 10px white;
+
+    }
+    

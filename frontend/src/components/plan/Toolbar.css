@@ -3,9 +3,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgb(14, 3, 3);
+    background: linear-gradient(to top,#0a045280, #101d55);
     height: 56px;
     border-bottom:solid 0.4px white;
+    box-shadow:0 1px 15px whitesmoke;
 
 }
 .toolbar_nav{
@@ -16,9 +17,11 @@
 
 }
 .toolbar_logo a {
-    color: blanchedalmond;
+    color: #25fde9;
     text-decoration: none;
     font-size: 2rem;
+    text-shadow:0px 0px 5px #FFFFFF
+
 
 
 
@@ -44,9 +47,12 @@
 .toolbar_nav_items a {
     color: blanchedalmond;
     text-decoration: none;
+    text-shadow:0px 0px 5px #FFFFFF;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 
 }
 .toolbar_nav_items a:hover,
 .toolbar_nav_items a:active{
-    color: rgb(206, 182, 182);
+    color: #25fde9;
 }

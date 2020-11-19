@@ -1,0 +1,69 @@
+.Carte{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.Carte1{
+        margin: 0 2% !important;
+        background-color:rgba(255, 255, 255, 0.116);
+        
+        box-shadow:0 10px 15px gray;
+        color:#25fde9;
+        width: 300px;
+        
+        
+        
+       
+    }
+
+
+
+.Carte2{
+    margin: 0 2% !important;
+    background-color:rgba(255, 255, 255, 0.116);
+    box-shadow:0 10px 15px gray;
+    color:#25fde9;
+    
+
+
+
+
+}
+    
+.Carte3{
+    margin: 0 2% !important;
+
+        
+        background-color:rgba(255, 255, 255, 0.116);
+        
+        box-shadow:0 10px 15px gray;
+        color:#25fde9;
+        
+    }
+    
+    .Carte1 :hover{
+
+        transform: scale(1.2,1.2);
+        background-color: rgb(21, 20, 63);
+        
+        
+        
+    }
+    .Carte2 :hover{
+
+        transform: scale(1.2,1.2);
+        background-color: rgb(21, 20, 63);
+        
+        
+        
+    }
+   
+    .Carte3 :hover{
+
+        transform: scale(1.2,1.2);
+        background-color: rgb(21, 20, 63);
+        
+        
+        
+    }
+   
+   
