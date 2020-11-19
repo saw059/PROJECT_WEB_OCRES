@@ -11,7 +11,14 @@ import {
 import "./Graph.css";
 import CountUp from 'react-countup';
 
-
+/***** 
+ * 
+ * 
+le widgets des nombres de morts avec le le petit moteur en pourcentage
+*
+*
+*
+*/////////
 
 registerShape('point', 'pointer', {
 	draw(cfg, container) {

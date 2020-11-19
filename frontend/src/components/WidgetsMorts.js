@@ -3,7 +3,7 @@ import { CardContent, Typography, Grid } from '@material-ui/core';
 import './WidgetsCarte.css';
 import CountUp from 'react-countup';
 
-
+//on n'utilise pas
 
 const WidgetsMorts = ({ data: { confirmed, deaths, lastUpdate } }) => {
     // console.log(confirmed)

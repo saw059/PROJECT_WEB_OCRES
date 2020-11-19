@@ -1,7 +1,7 @@
 import React from 'react';
 import {
 	Chart,
-    Point,
+	Point,
 	Annotation,
 	Axis,
 	Coordinate,
@@ -11,7 +11,14 @@ import {
 import "./Graph.css";
 import CountUp from 'react-countup';
 
-
+/***** 
+ * 
+ * 
+le widgets des nombres de Rétablis avec le le petit moteur en pourcentage
+*
+*
+*
+*/////////
 
 registerShape('point', 'pointer', {
 	draw(cfg, container) {
@@ -36,10 +43,10 @@ registerShape('point', 'pointer', {
 	},
 });
 
-const MoteurI = ({data : {confirmed,recovered,deaths},country}) => {
+const Moteur = ({data : {confirmed,recovered,deaths},country}) => {
     /*
     const [dailyydata, setdailydata] = useState([]);
-    const pourcentage = 0.9;
+    const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
     
 
     useEffect(() => {
@@ -52,7 +59,7 @@ const MoteurI = ({data : {confirmed,recovered,deaths},country}) => {
         Fetchapi();
     }, []);
     */
-//const pourcentage = confirmed.value/(confirmed.value+recovered.value+deaths.value );
+//const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
 
 //const data : [{ value:recovered.value/(confirmed.value+recovered.value+deaths.value ) }];
 
@@ -61,7 +68,7 @@ if (!confirmed) {
     return "Loading...";
 }
 
-const pourcentage = confirmed.value/(confirmed.value+recovered.value+deaths.value );
+const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
 const data= [{
     value : pourcentage
 }];
@@ -137,7 +144,7 @@ const graphique = (
 			/>
 			<Annotation.Text
 				position={['50%', '85%']}
-				content={'infectés'}
+				content={'Rétablis'}
 				style={{
 					fontSize: 20,
 					fill: '#545454',
@@ -159,18 +166,18 @@ const graphique = (
     return (
         <div className="moteur">
             <div className="moteurI">
-                <h3>infectés</h3>
-                <p>Nombre : <CountUp start={0} end={confirmed.value} duration={2.5} separator="," /> </p>
+                <h3>Rétablis</h3>
+                <p>Nombre : <CountUp start={0} end={recovered.value} duration={2.5} separator="," /></p>
                 {country ? graphique : graphique }
                 
-
+                
             </div>
             
-                
+    
         </div>
      )
 }
 
 
-//ReactDOM.render(<Chart />, mountNode);
-export default MoteurI;
+//ReactDOM.render(<Demo />, mountNode);
+export default Moteur;

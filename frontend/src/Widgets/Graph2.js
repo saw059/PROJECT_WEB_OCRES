@@ -9,6 +9,15 @@ import {
 import { dailydata } from '../API/ApiCovid';
 import "./Graph.css";
 
+/***** 
+ * 
+ * 
+le widgets du graphique 
+*
+*
+*
+*/////////
+
 const Graph2 = ({data : {confirmed,recovered,deaths},country}) => {
     const [dailyydata, setdailydata] = useState([]);
 

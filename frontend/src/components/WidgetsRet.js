@@ -3,6 +3,7 @@ import { CardContent, Typography, Grid } from '@material-ui/core';
 import './WidgetsCarte.css';
 import CountUp from 'react-countup';
 
+//on n'utilise pas
 
 
 const WidgetsRet = ({ data: { confirmed, recovered, lastUpdate } }) => {

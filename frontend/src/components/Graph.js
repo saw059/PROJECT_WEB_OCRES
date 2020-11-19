@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Pie,Scatter} from 'react-chartjs-2';
+import { Pie,Doughnut} from 'react-chartjs-2';
 import { dailydata } from '../API/ApiCovid';
 
 import "./Graph.css";
 
+
+
+/***** 
+ * 
+ * 
+le widgets du graph qu'on utlise pas mais qui marche aussi
+*
+*
+*
+*/////////
 const Graph = ({data : {confirmed,recovered,deaths},country}) => {
     const [dailyydata, setdailydata] = useState([]);
 
@@ -18,7 +28,7 @@ const Graph = ({data : {confirmed,recovered,deaths},country}) => {
     }, []);
     const Linechart = (
         dailyydata.length ?
-            (<Scatter
+            (<Doughnut
                 data={{
                     labels:['Infected','Recovered', 'Deaths'],
                     datasets:[{

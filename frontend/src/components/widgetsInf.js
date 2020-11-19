@@ -3,7 +3,7 @@ import { CardContent, Typography, Grid } from '@material-ui/core';
 import './WidgetsCarte.css';
 import CountUp from 'react-countup';
 
-//on utilise pas
+//on n'utilise pas
 
 const WidgetsInf = ({ data: { confirmed, lastUpdate } }) => {
     // console.log(confirmed)

@@ -1,7 +1,14 @@
 import React from 'react';
 //import {NativeSelect , FormControl} from '@material-ui/core';
 import "./Country.css";
-
+/***** 
+ * 
+ * 
+la barre de changement de pays 
+*
+*
+*
+*/////////
 const Country = ({handlecountrychange}) =>{
 
     return(
@@ -15,14 +22,6 @@ const Country = ({handlecountrychange}) =>{
 
 
         </div>
-        /*
-       <FormControl className="pays">
-           <NativeSelect defaultValue="" onChange={(e)=>handlecountrychange(e.target.value)}>
-               <option value="">Global</option>
-               <option value="France">France</option>
-           </NativeSelect>
-       </FormControl>
-       */
 
     )
 }

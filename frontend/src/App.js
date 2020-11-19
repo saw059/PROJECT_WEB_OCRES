@@ -11,14 +11,14 @@ import Country from './components/Country';
 import admin from '../src/admin';
 //import Graph2 from './components/Graph2';
 //import Moteur from './components/Moteur';
-import MoteurI from './components/MoteurI';
-import MoteurM from './components/MoteurM';
-import Moteur from './components/Moteur';
+import MoteurI from './Widgets/MoteurI';
+import MoteurM from './Widgets/MoteurM';
+import Moteur from './Widgets/Moteur';
 
 //import WidgetsMorts from './components/WidgetsMorts';
 //import WidgetsInf from './components/widgetsInf';
 //import WidgetsRet from './components/WidgetsRet';
-import Graph2 from './components/Graph2';
+import Graph2 from './Widgets/Graph2';
 
 
 
@@ -51,11 +51,7 @@ handlecountrychange = async(country)=>
 }
 
   render(){
-/*
-    if(this.state1.loading){
-      
-    }
-    */
+
     const {data , country} = this.state;
 
     return(

@@ -1,9 +1,8 @@
 import React from 'react';
 import {
 	Chart,
-	Point,
-    Annotation,
-
+    Point,
+	Annotation,
 	Axis,
 	Coordinate,
 	registerShape,
@@ -11,6 +10,15 @@ import {
 //import { dailydata } from '../API/ApiCovid';
 import "./Graph.css";
 import CountUp from 'react-countup';
+
+/***** 
+ * 
+ * 
+le widgets des nombres d'infectés avec le le petit moteur en pourcentage
+*
+*
+*
+*/////////
 
 
 
@@ -37,10 +45,10 @@ registerShape('point', 'pointer', {
 	},
 });
 
-const Moteur = ({data : {confirmed,recovered,deaths},country}) => {
+const MoteurI = ({data : {confirmed,recovered,deaths},country}) => {
     /*
     const [dailyydata, setdailydata] = useState([]);
-    const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
+    const pourcentage = 0.9;
     
 
     useEffect(() => {
@@ -53,7 +61,7 @@ const Moteur = ({data : {confirmed,recovered,deaths},country}) => {
         Fetchapi();
     }, []);
     */
-//const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
+//const pourcentage = confirmed.value/(confirmed.value+recovered.value+deaths.value );
 
 //const data : [{ value:recovered.value/(confirmed.value+recovered.value+deaths.value ) }];
 
@@ -62,7 +70,7 @@ if (!confirmed) {
     return "Loading...";
 }
 
-const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
+const pourcentage = confirmed.value/(confirmed.value+recovered.value+deaths.value );
 const data= [{
     value : pourcentage
 }];
@@ -138,7 +146,7 @@ const graphique = (
 			/>
 			<Annotation.Text
 				position={['50%', '85%']}
-				content={'Rétablis'}
+				content={'infectés'}
 				style={{
 					fontSize: 20,
 					fill: '#545454',
@@ -160,18 +168,18 @@ const graphique = (
     return (
         <div className="moteur">
             <div className="moteurI">
-                <h3>Rétablis</h3>
-                <p>Nombre : <CountUp start={0} end={recovered.value} duration={2.5} separator="," /></p>
+                <h3>infectés</h3>
+                <p>Nombre : <CountUp start={0} end={confirmed.value} duration={2.5} separator="," /> </p>
                 {country ? graphique : graphique }
                 
-                
+
             </div>
             
-    
+                
         </div>
      )
 }
 
 
-//ReactDOM.render(<Demo />, mountNode);
-export default Moteur;
+//ReactDOM.render(<Chart />, mountNode);
+export default MoteurI;
