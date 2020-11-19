@@ -6,7 +6,7 @@ import'./Toolbar.css';
 
 const toolbar = props => (
 
-    <header className="toolbar">
+    <header className="toolbar" >
         <nav className="toolbar_nav">
 
 
@@ -16,12 +16,6 @@ const toolbar = props => (
 
             <div className="toolbar_nav_items">
                 <ul>
-                
-    
-    
-   
-                    
-                    
                     <li><Link href="/admin" to="/admin">Admin</Link></li>
                     
                 </ul>

@@ -5,7 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(https://www.santepubliquefrance.fr/var/site/storage/images/8/4/3/5/2755348-1-fre-FR/spf_dossier_covid_header.jpg);
+  background: linear-gradient( rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.589) ), url(https://www.santepubliquefrance.fr/var/site/storage/images/8/4/3/5/2755348-1-fre-FR/spf_dossier_covid_header.jpg);
+  
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+  
   
 }
 

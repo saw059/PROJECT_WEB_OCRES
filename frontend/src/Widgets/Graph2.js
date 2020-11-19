@@ -35,7 +35,7 @@ const graphique = (
     dailyydata.length ?
     
   
-    (<Chart height={300} 
+    (<Chart height={350} 
     data={[
     { type: 'Confirmés', value: confirmed.value },
     { type: 'retablis', value: recovered.value},
@@ -59,7 +59,7 @@ const graphique = (
       <Interval
         position="type*value"
         adjust="stack"
-        color={['type', 'rgb(252,143,72)-rgb(255,215,135)']}
+        color={['type', '#25fde9-black']}
         element-highlight
         style={{
           lineWidth: 1,
@@ -80,7 +80,7 @@ const graphique2 = (
     dailyydata.length ?
     
   
-    (<Chart height={300} 
+    (<Chart height={350} 
     data={[
     { type: 'Confirmés', value: confirmed.value },
     { type: 'retablis', value: recovered.value},
@@ -104,7 +104,7 @@ const graphique2 = (
       <Interval
         position="type*value"
         adjust="stack"
-        color={['type', 'rgb(252,143,72)-rgb(255,215,135)']}
+        color={['type', 'red-black']}
         element-highlight
         style={{
           lineWidth: 1,
@@ -124,6 +124,7 @@ const graphique2 = (
 return (
     <div className="graph">
 {country ? graphique : graphique2 }
+
     </div>
  )
 }

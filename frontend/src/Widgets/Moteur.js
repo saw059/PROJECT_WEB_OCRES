@@ -68,7 +68,7 @@ if (!confirmed) {
     return "Loading...";
 }
 
-const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
+const pourcentage = recovered.value/confirmed.value;
 const data= [{
     value : pourcentage
 }];
@@ -79,7 +79,7 @@ const graphique = (
 			height={500}
             data={data}
             
-			padding={[100, 0, 200, 0]}
+			padding={[200,0, 520, 0]}
 			scale={{
 				value: {
 					min: 0,
@@ -164,8 +164,8 @@ const graphique = (
 		</Chart>)
     )
     return (
-        <div className="moteur">
-            <div className="moteurI">
+        
+            <div xs={8} md={3} className="moteurG">
                 <h3>Rétablis</h3>
                 <p>Nombre : <CountUp start={0} end={recovered.value} duration={2.5} separator="," /></p>
                 {country ? graphique : graphique }
@@ -174,7 +174,7 @@ const graphique = (
             </div>
             
     
-        </div>
+       
      )
 }
 

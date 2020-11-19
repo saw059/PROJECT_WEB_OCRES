@@ -1,13 +1,15 @@
 .toolbar{
-    position: fixed;
-    top: 0;
+    position: absolute;
+    
     left: 0;
     width: 100%;
-    background: linear-gradient(to top,#0a045280, #101d55);
+    background: linear-gradient(to top,#1b1b1bcc, #000000ab);
     height: 56px;
     border-bottom:solid 0.4px white;
     box-shadow:0 1px 15px whitesmoke;
-
+    top: 0;
+    right: 0;
+    
 }
 .toolbar_nav{
     display: flex;
@@ -17,7 +19,7 @@
 
 }
 .toolbar_logo a {
-    color: #25fde9;
+    color: white;
     text-decoration: none;
     font-size: 2rem;
     text-shadow:0px 0px 5px #FFFFFF

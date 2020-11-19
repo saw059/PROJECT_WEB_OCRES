@@ -9,7 +9,6 @@ import { fetchdata } from './API/ApiCovid';
 import Country from './components/Country';
 
 import admin from '../src/admin';
-//import Graph2 from './components/Graph2';
 //import Moteur from './components/Moteur';
 import MoteurI from './Widgets/MoteurI';
 import MoteurM from './Widgets/MoteurM';
@@ -19,6 +18,7 @@ import Moteur from './Widgets/Moteur';
 //import WidgetsInf from './components/widgetsInf';
 //import WidgetsRet from './components/WidgetsRet';
 import Graph2 from './Widgets/Graph2';
+//import Discours from './Widgets/Discours';
 
 
 
@@ -51,7 +51,6 @@ handlecountrychange = async(country)=>
 }
 
   render(){
-
     const {data , country} = this.state;
 
     return(
@@ -70,13 +69,12 @@ handlecountrychange = async(country)=>
 
         <Country handlecountrychange={this.handlecountrychange} />
         <Graph2 data={data} country={country}/>
+
         
         <Moteur  data={data} country={country}/>
         <MoteurI  data={data} country={country}/>
         <MoteurM  data={data} country={country}/>
-        
-        
-
+ 
         
         
         </Router>

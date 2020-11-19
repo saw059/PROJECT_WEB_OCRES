@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Pie,Doughnut} from 'react-chartjs-2';
+import { HorizontalBar} from 'react-chartjs-2';
 import { dailydata } from '../API/ApiCovid';
 
-import "./Graph.css";
+import "../Widgets/Graph.css";
 
 
 
@@ -28,7 +28,7 @@ const Graph = ({data : {confirmed,recovered,deaths},country}) => {
     }, []);
     const Linechart = (
         dailyydata.length ?
-            (<Doughnut
+            (<HorizontalBar
                 data={{
                     labels:['Infected','Recovered', 'Deaths'],
                     datasets:[{
@@ -46,7 +46,7 @@ const Graph = ({data : {confirmed,recovered,deaths},country}) => {
 
     const Barchart =(
 confirmed?
-<Pie
+<HorizontalBar
 data={{
     labels:['Infected','Recovered', 'Deaths'],
     datasets:[{

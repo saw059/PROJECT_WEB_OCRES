@@ -68,7 +68,7 @@ if (!confirmed) {
     return "Loading...";
 }
 
-const pourcentage = deaths.value/(confirmed.value+recovered.value+deaths.value );
+const pourcentage = deaths.value/confirmed.value;
 const data= [{
     value : pourcentage
 }];
@@ -80,7 +80,8 @@ const graphique = (
 			height={500}
             data={{value : deaths.value/(confirmed.value+recovered.value+deaths.value )}}
             
-			padding={[100, 0, 200, 0]}
+			padding={[200,0, 520, 0]}
+			
 			scale={{
 				value: {
 					min: 0,
@@ -163,10 +164,11 @@ const graphique = (
 				offsetY={15}
 			/>
 		</Chart>)
-    )
+	)
+	
     return (
-        <div className="moteur">
-            <div className="moteurI">
+        
+            <div xs={8} md={3} className="moteurD">
                 <h3>Morts </h3>
                 <p>Nombre : <CountUp start={0} end={deaths.value} duration={2.5} separator="," /></p>
                 {country ? graphique : graphique }
@@ -175,7 +177,7 @@ const graphique = (
             </div>
             
     
-        </div>
+        
      )
 }
 
