@@ -1,0 +1,108 @@
+.Carte{
+    width: 50%; 
+margin-top: 400px;
+right: 25%;
+
+
+    
+
+
+
+}
+.Compa{
+        position: relative;
+        color: white;
+        
+        margin-right: 4%;
+        right: 0;
+        
+        position: absolute;
+       
+        height: 420px;
+        width:15%;
+        top: 19%;
+        min-width: 120px;
+    
+        
+        margin-right: 0 2% !important;;
+        margin-top: 4%;
+        
+        background-color: rgba(17, 17, 17, 0.795);
+        border-radius: 10px;
+        box-shadow:0 10px 15px gray;
+        margin-bottom: 10%;
+       
+        padding-bottom: 20px;
+        
+  
+
+}
+.Compa:hover{
+
+    transform: scale(1.1,1.1);
+    background-color: rgba(17, 17, 17, 0.925);
+    
+    padding-bottom: 50px;
+    
+    
+    
+  }
+.confirmé{
+    height: 30%;
+    text-align: center;
+    border-bottom: 1px solid aqua;
+    box-shadow:0 2px 2px 0px aqua;
+    
+    padding-bottom: 10px;
+    right: 0;    
+    line-height: 0.7;
+    padding-top: 10px;
+
+
+    
+
+
+}
+.confirmé h1{
+    color: aqua;
+}
+.confirmé p1{
+    color: gray;
+    font-size: xx-small;
+}
+.retablis{
+    height: 30%;
+    text-align: center;
+    border-bottom: 1px solid aqua;
+    padding-bottom: 10px;
+    line-height: 0.7;
+    padding-top: 10px;
+
+    
+
+
+}
+.retablis p1{
+    color: gray;
+    font-size: xx-small;
+    
+}
+.retablis h1{
+    color: aqua;
+}
+.morts{
+    height: 33%;
+    text-align: center;
+    padding-bottom: 10px;
+    line-height: 0.7;
+    padding-top: 10px;
+
+}
+.morts h1{
+    color: aqua;
+}
+.morts p1{
+    color: gray;
+    font-size: xx-small;
+    line-height: 0;
+}

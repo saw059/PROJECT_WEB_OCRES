@@ -1,0 +1,41 @@
+.Attestation {
+    position: absolute;
+    display: grid;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin: 0 2% !important;
+    margin-top: 45%; 
+    margin-right: 9px;
+    
+    min-width: 40px;
+    
+    width: 30%;
+    
+    min-height: 50px;
+    
+    
+    
+    left: 2%;
+    right: 60%;
+    
+    
+    
+    background-color: rgba(17, 17, 17, 0.795);
+    border-radius: 10px;
+    box-shadow:0 10px 15px gray;
+    padding: 10px;
+    top: 1400px;
+    padding-bottom: 5px;
+   
+    
+    
+}
+.Attestation:hover{
+
+    transform: scale(1.05,1.05);
+    background-color: rgba(17, 17, 17, 0.925);
+    
+    
+    
+  }

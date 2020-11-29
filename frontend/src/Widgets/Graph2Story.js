@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Chart,
   Interval,
@@ -6,7 +6,7 @@ import {
   Axis,
   Coordinate
 } from 'bizcharts';
-import { dailydata } from '../API/ApiCovid';
+
 import "./Graph.css";
 
 /***** 
@@ -18,28 +18,18 @@ le widgets du graphique
 *
 */////////
 
-const Graph2 = ({data : {confirmed,recovered,deaths},country}) => {
-    const [dailyydata, setdailydata] = useState([]);
-
-    useEffect(() => {
-        const Fetchapi = async () => {
-            setdailydata(await dailydata());
-        }
-
-        // console.log(dailyydata);
-
-        Fetchapi();
-    }, []);
+const Graph2Story = () => {
+   
 
 const graphique =(
-    dailyydata.length ?
+    
     
   
-    (<Chart height={400} 
+    (<Chart height={350} 
     data={[
-    { type: 'Confirmés', value: confirmed.value },
-    { type: 'retablis', value: recovered.value},
-    { type: 'morts', value: deaths.value },
+    { type: 'Confirmés', value: 500},
+    { type: 'retablis', value: 400},
+    { type: 'morts', value: 90},
     
     ]}
         
@@ -59,7 +49,7 @@ const graphique =(
       <Interval
         position="type*value"
         adjust="stack"
-        color={['type', 'aqua-black']}
+        color={['type', '#25fde9-black']}
         element-highlight
         style={{
           lineWidth: 1,
@@ -70,22 +60,21 @@ const graphique =(
           style: {
             textAlign: 'center',
             fill: '#000',
-            fontSize: 0,
           },
         }]}
       />
-    </Chart>):null
+    </Chart>)
   
 )
 const graphique2 = (
-    dailyydata.length ?
+    
     
   
-    (<Chart height={400} 
+    (<Chart height={350} 
     data={[
-    { type: 'Confirmés', value: confirmed.value },
-    { type: 'Rétablis', value: recovered.value},
-    { type: 'Morts', value: deaths.value },
+    { type: 'Confirmés', value: 100 },
+    { type: 'retablis', value: 90},
+    { type: 'morts', value: 221 },
     
     ]}
         
@@ -93,7 +82,7 @@ const graphique2 = (
       <Coordinate
         type="polar"
          startAngle={0} 
-         endAngle={Math.PI *(4/2)} 
+         endAngle={Math.PI *(3/2)} 
       />
       <Axis name="value" grid={{
         line: {
@@ -105,7 +94,7 @@ const graphique2 = (
       <Interval
         position="type*value"
         adjust="stack"
-        color={['type', 'aqua-black']}
+        color={['type', 'red-black']}
         element-highlight
         style={{
           lineWidth: 1,
@@ -116,23 +105,26 @@ const graphique2 = (
           style: {
             textAlign: 'center',
             fill: '#000',
-            fontSize: 0,
-            
-            
-            
           },
         }]}
       />
-    </Chart>):null
+    </Chart>)
   
 )
 return (
     <div className="graph">
-{country ? graphique : graphique2 }
+        {graphique2 }
+        <br/>
+        <br/>
+        <br/>
+        <br/><br/><br/><br/>
+        {graphique}
 
     </div>
  )
 }
 
+//ReactDOM.render(<Graph2Story />, mountNode);
 
-export default Graph2;
+
+export default Graph2Story;

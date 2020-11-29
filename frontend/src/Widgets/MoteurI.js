@@ -45,36 +45,13 @@ registerShape('point', 'pointer', {
 	},
 });
 
-const MoteurI = ({data : {confirmed,recovered,deaths},country}) => {
-    /*
-    const [dailyydata, setdailydata] = useState([]);
-    const pourcentage = 0.9;
-    
-
-    useEffect(() => {
-        const Fetchapi = async () => {
-            setdailydata(await dailydata());
-        }
-
-        
-
-        Fetchapi();
-    }, []);
-    */
-//const pourcentage = confirmed.value/(confirmed.value+recovered.value+deaths.value );
-
-//const data : [{ value:recovered.value/(confirmed.value+recovered.value+deaths.value ) }];
-
+const MoteurI = ({data : {confirmed,lastUpdate},country}) => {
+   
 
 if (!confirmed) {
     return "Loading...";
 }
-/*
-const pourcentage = confirmed.value/65979457;
-const data= [{
-    value : pourcentage
-}];
-*/
+
 const graphique = (
     
 		(<Chart
@@ -103,19 +80,19 @@ const graphique = (
 				name="value"
 				line={null}
 				label={{
-					offset: -36,
+					offset: -20,
 					style: {
-						fontSize: 18,
+						fontSize: 8,
 						textAlign: 'center',
 						textBaseline: 'middle',
 					},
 				}}
 				subTickLine={{
 					count: 4,
-					length: -15,
+					length: -13,
 				}}
 				tickLine={{
-					length: -24,
+					length: -16,
 				}}
 				grid={null}
 			/>
@@ -146,7 +123,7 @@ const graphique = (
 			/>
 			<Annotation.Text
 				position={['50%', '85%']}
-				content={'infectés'}
+				
 				style={{
 					fontSize: 20,
 					fill: '#545454',
@@ -165,15 +142,11 @@ const graphique = (
 			/>
 		</Chart>)
 	)
-	/*
-	const pourcentage2 = confirmed.value/7000000000;
-	const data2= [{
-    value : pourcentage2
-}];
-*/
+
 	const graphique2 = (
     
 		(<Chart
+			
 			height={500}
 			bottom={0}
             data={{value:confirmed.value/7000000000}}
@@ -200,19 +173,19 @@ const graphique = (
 				name="value"
 				line={null}
 				label={{
-					offset: -36,
+					offset: -20,
 					style: {
-						fontSize: 18,
+						fontSize: 8,
 						textAlign: 'center',
 						textBaseline: 'middle',
 					},
 				}}
 				subTickLine={{
 					count: 4,
-					length: -15,
+					length: -13,
 				}}
 				tickLine={{
-					length: -24,
+					length: -16,
 				}}
 				grid={null}
 			/>
@@ -243,7 +216,7 @@ const graphique = (
 			/>
 			<Annotation.Text
 				position={['50%', '85%']}
-				content={'infectés'}
+				
 				style={{
 					fontSize: 20,
 					fill: '#545454',
@@ -264,9 +237,10 @@ const graphique = (
     )
     return (
         
-            <div xs={8} md={3} className="moteurC">
-                <h3>infectés</h3>
-                <p>Nombre : <CountUp start={0} end={confirmed.value} duration={2.5} separator="," /> </p>
+            <div className="moteurC">
+                <h3>Confirmés</h3>
+				<p1>{new Date(lastUpdate).toDateString()}</p1>
+                <p> <CountUp start={0} end={confirmed.value} duration={2.5} separator="," /> </p>
                 {country ? graphique : graphique2 }
 	
                 
@@ -279,5 +253,5 @@ const graphique = (
 }
 
 
-//ReactDOM.render(<Chart />, mountNode);
+
 export default MoteurI;

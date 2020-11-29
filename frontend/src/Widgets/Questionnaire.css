@@ -1,0 +1,127 @@
+
+h2, h3, label {
+    color: white;
+}
+
+button  {
+    padding: 1%;
+}
+
+button:hover {
+    box-shadow: 0 3px 10px 0 white, 0 8px 50px 0 white;
+}
+
+
+
+.Questionnaire{
+    position: absolute;
+    
+    color: white;
+    justify-content: center;
+    margin: 0 2% !important;
+    margin-top: 25%; 
+    margin-right: 9px;
+    
+    min-width: 40px;
+    min-height: 230px;
+    max-width: 400px;
+    width: 40%;
+    
+  
+    
+    
+    right: 2%;
+    
+    
+    
+    
+    background-color: rgba(17, 17, 17, 0.795);
+    border-radius: 10px;
+    box-shadow:0 10px 15px gray;
+    padding: 10px;
+    top: 1050px;
+    padding-bottom: 5px;
+   
+    
+   
+    
+}
+
+.Questionnaire:hover{
+    transform: scale(1.05,1.05);
+    background-color: rgba(17, 17, 17, 0.925);
+    
+    
+    
+    
+  }*/
+  .infected{
+    border-bottom: 10px solid blue;
+    
+}
+.card{
+    margin: 0 2% !important;
+    background-color: tomato;
+     
+}
+.droit{
+    float: right;
+    
+    
+
+}
+.gauche{
+    float: left;
+    max-width: 100px;
+    
+
+}
+.multiselect {
+    width: 200px;
+  }
+  
+  .selectBox {
+    position: relative;
+  }
+  
+  .selectBox select {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+  }
+  
+  #checkboxes label {
+    display: block;
+  }
+  
+  #checkboxes label:hover {
+    background-color: #1e90ff;
+  }
+  .reco{
+      
+     
+      min-height: 100px;
+      max-width: 400px;
+      
+      
+    
+      
+      
+      right: 2%;
+     
+
+
+  }
+  

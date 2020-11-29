@@ -20,7 +20,7 @@ return {confirmed , recovered , deaths , lastUpdate};
 console.log(error);
     }
 }
-//recupere la data modifié
+//recupere la data modifié journaliere
 
 export const dailydata = async ()=>{
     try{

@@ -15,8 +15,9 @@ const Country = ({handlecountrychange}) =>{
 
         <div className="pays">
             <select defaultValue="" onChange={(e)=>handlecountrychange(e.target.value)}>
-            <option value="">Global</option>
+            <option value="">Monde entier</option>
             <option value="France">France</option>
+            
 
             </select>
 

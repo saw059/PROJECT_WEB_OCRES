@@ -2,19 +2,19 @@ import React from 'react';
 import {
 	Chart,
 	Point,
-    Annotation,
+	Annotation,
 	Axis,
 	Coordinate,
 	registerShape,
 } from 'bizcharts';
-
+//import { dailydata } from '../API/ApiCovid';
 import "./Graph.css";
 import CountUp from 'react-countup';
 
 /***** 
  * 
  * 
-le widgets des nombres de morts avec le le petit moteur en pourcentage
+le widgets des nombres de Rétablis avec le le petit moteur en pourcentage
 *
 *
 *
@@ -43,26 +43,17 @@ registerShape('point', 'pointer', {
 	},
 });
 
-const MoteurM = ({data : {confirmed,recovered,deaths,lastUpdate},country}) => {
-    
-if (!confirmed) {
-    return "Loading...";
-}
-
-const pourcentage = deaths.value/confirmed.value;
-const data= [{
-    value : pourcentage
-}];
+const MoteurStory = () => {
+   
 
 
 const graphique = (
-  
+    
 		(<Chart
 			height={500}
-            data={{value : deaths.value/(confirmed.value+recovered.value+deaths.value )}}
+            data={0.8}
             
 			padding={[200,0, 520, 0]}
-			
 			scale={{
 				value: {
 					min: 0,
@@ -77,26 +68,26 @@ const graphique = (
 				type="polar"
 				radius={0.75}
 				startAngle={(-12 / 10) * Math.PI}
-				endAngle={(2/ 10) * Math.PI}
+				endAngle={(2 / 10) * Math.PI}
 			/>
 			<Axis name="1" />
 			<Axis
 				name="value"
 				line={null}
 				label={{
-					offset: -20,
+					offset: -36,
 					style: {
-						fontSize: 8,
+						fontSize: 18,
 						textAlign: 'center',
 						textBaseline: 'middle',
 					},
 				}}
 				subTickLine={{
 					count: 4,
-					length: -13,
+					length: -15,
 				}}
 				tickLine={{
-					length: -16,
+					length: -24,
 				}}
 				grid={null}
 			/>
@@ -118,7 +109,7 @@ const graphique = (
 			/>
 			<Annotation.Arc
 				start={[0, 1]}
-				end={[data[0].value, 1]}
+				end={[0.8, 1]}
 				style={{
 					stroke: '#25fde9',
 					lineWidth: 18,
@@ -127,7 +118,7 @@ const graphique = (
 			/>
 			<Annotation.Text
 				position={['50%', '85%']}
-				
+				content={'Rétablis'}
 				style={{
 					fontSize: 20,
 					fill: '#545454',
@@ -136,7 +127,7 @@ const graphique = (
 			/>
 			<Annotation.Text
 				position={['50%', '90%']}
-				content={`${(data[0].value * 100).toFixed()} %`}
+				content={`${(0.8 * 100).toFixed()} %`}
 				style={{
 					fontSize: 36,
 					fill: '#545454',
@@ -145,24 +136,22 @@ const graphique = (
 				offsetY={15}
 			/>
 		</Chart>)
-	)
-	
+    )
     return (
         
-            <div className="moteurD">
-                <h3>Morts </h3>
-				<p1>{new Date(lastUpdate).toDateString()}</p1>
-                <p><CountUp start={0} end={deaths.value} duration={4} separator="," /></p>
-                {country ? graphique : graphique }
+            <div xs={8} md={3} className="moteurG">
+                <h3>Rétablis</h3>
+                <p>Nombre : <CountUp start={0} end={30038022} duration={5} separator="," /></p>
+                {graphique }
                 
                 
             </div>
             
     
-        
+       
      )
 }
 
 
-
-export default MoteurM;
+//ReactDOM.render(<Demo />, mountNode);
+export default MoteurStory;

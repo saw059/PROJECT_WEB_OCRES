@@ -43,27 +43,8 @@ registerShape('point', 'pointer', {
 	},
 });
 
-const Moteur = ({data : {confirmed,recovered,deaths},country}) => {
-    /*
-    const [dailyydata, setdailydata] = useState([]);
-    const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
-    
-
-    useEffect(() => {
-        const Fetchapi = async () => {
-            setdailydata(await dailydata());
-        }
-
-        
-
-        Fetchapi();
-    }, []);
-    */
-//const pourcentage = recovered.value/(confirmed.value+recovered.value+deaths.value );
-
-//const data : [{ value:recovered.value/(confirmed.value+recovered.value+deaths.value ) }];
-
-
+const Moteur = ({data : {confirmed,recovered,lastUpdate},country}) => {
+  
 if (!confirmed) {
     return "Loading...";
 }
@@ -101,19 +82,19 @@ const graphique = (
 				name="value"
 				line={null}
 				label={{
-					offset: -36,
+					offset: -20,
 					style: {
-						fontSize: 18,
+						fontSize: 8,
 						textAlign: 'center',
 						textBaseline: 'middle',
 					},
 				}}
 				subTickLine={{
 					count: 4,
-					length: -15,
+					length: -13,
 				}}
 				tickLine={{
-					length: -24,
+					length: -16,
 				}}
 				grid={null}
 			/>
@@ -144,7 +125,7 @@ const graphique = (
 			/>
 			<Annotation.Text
 				position={['50%', '85%']}
-				content={'Rétablis'}
+				
 				style={{
 					fontSize: 20,
 					fill: '#545454',
@@ -165,9 +146,10 @@ const graphique = (
     )
     return (
         
-            <div xs={8} md={3} className="moteurG">
+            <div className="moteurG">
                 <h3>Rétablis</h3>
-                <p>Nombre : <CountUp start={0} end={recovered.value} duration={2.5} separator="," /></p>
+				<p1>{new Date(lastUpdate).toDateString()}</p1>
+                <p><CountUp start={0} end={recovered.value} duration={4} separator="," /></p>
                 {country ? graphique : graphique }
                 
                 
@@ -179,5 +161,5 @@ const graphique = (
 }
 
 
-//ReactDOM.render(<Demo />, mountNode);
+
 export default Moteur;
