@@ -18,7 +18,9 @@ class Articles extends React.Component {
      //constructor
      constructor(props){
         super(props);
-        this.state = { numero: 0 ,
+        this.state = { 
+            
+        numero: 0 ,
         
         articles:[
                 {
