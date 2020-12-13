@@ -15,7 +15,8 @@
     Les widgets donnant des informations : le widget graphique qui donne le nombre de personnes détectées en tant que cas Covid-19 par test ("Confirmés"), le nombre de celles s'étant rétablis ("Rétablis") et celles étant mortes ("Mortes") depuis le début de la pandémie; les widgets Comparaison donnent l'évolution en pourcentage des Confirmés par jour, par rapport à une date ultérieure (ex : augmentation de 10% des morts/jour comparés au 20/11/20); les widgets Moteurs montrant les chiffres du graphique mais en pourcentage (ex : nombre de Confirmés en % = 100*nombre de Confirmés/nombre de personnes sur terre).
    
     Les widegts avec intéractions : le widget Articles permet de changer d'article en cliquant sur un bouton; le widget Questionnaire permet de donner des recommendations sur les comportements à avoir en focntion de l'âge et des symptômes de l'utilisateur; le widget Attestation permet de télécharger une attestation de sortie.
-
+  # La base de données:
+  MangoDB 
   # Lancer la partie backend:
 
     Dans la console (cmd sur le navigateur) : 
@@ -29,29 +30,21 @@
     
     git clone *lien forké*
     cd *adresse pc*\PROJET_WEB_OCRES\backend
-    //il faut d'abord toutes les Depencies 
+    il faut d'abord installer toutes les Depencies 
     npm install
     npm install express cors mongoose dotenv
     npm install -g nodemon
     npm install axios --save
+    créer un ficher .env avec l'atlas url pour la connexion la base de données Mongodb qu'on va pas donner ici pour une question de sécurité
     
     pour lancer le serveur : nodemon server 
   
   # Comment intérargir avec l'interface ? 
 
-    Le widget Articles permet de changer d'article en cliquant sur un bouton. Pour cela l'utilisateur peut cliquer sur le bouton "Changer d'article" afin de passer à l'article suivant.
-
-    Le widget Questionnaire permet de donner des recommendations sur les comportements à avoir en fonction de l'âge et des symptômes de l'utilisateur. Pour cela l'utilisateur peut rentrer son âge dans l'input créé à cet effet et cocher ses symptômes, en cliquant sur les côches à gauche des symptômes ressentis. Un message apparait.
-
-    Le widget Attestation permet de télécharger une attestation de sortie.
-
-  # Difficultés/Problèmes/Eléments qui ne fonctionnent pas
     
-    Il a été difficile de rendre la page complétement responsive, mais nous pensons y être arrivés.
+    -la page admin permet d'ajouter/supprimer/modifier un article qui sera dans le widgets article.
 
-  # Lien de notre outil de gestion de travail d'équipe 
 
-    https://trello.com/invite/b/x54YEuja/85505d0563578a5f37d24c43a9020dae/projet-web
 
   # Contributeurs
 
