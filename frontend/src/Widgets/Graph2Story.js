@@ -12,7 +12,7 @@ import "./Graph.css";
 /***** 
  * 
  * 
-le widgets du graphique 
+le widgets du graphique pour le mettre sur storybook
 *
 *
 *

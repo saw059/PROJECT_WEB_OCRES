@@ -20,12 +20,14 @@ le widgets des nombres de Rétablis avec le le petit moteur en pourcentage
 *
 */////////
 
+
+//caractéristique du graphique moteur
 registerShape('point', 'pointer', {
 	draw(cfg, container) {
 		const group = container.addGroup();
-		const center = this.parsePoint({ x: 0, y: 0 }); 
+		const center = this.parsePoint({ x: 0, y: 0 });
 		const start = this.parsePoint({ x: 0, y: 0.5 });
-		
+
 		;
 
 		const angle1 = Math.atan((start.y - center.y) / (start.x - center.x));
@@ -39,28 +41,28 @@ registerShape('point', 'pointer', {
 			group.rotateAtPoint(center.x, center.y, angle);
 		}
 
-		
+
 	},
 });
 
-const Moteur = ({data : {confirmed,recovered,lastUpdate},country}) => {
-  
-if (!confirmed) {
-    return "Loading...";
-}
+const Moteur = ({ data: { confirmed, recovered, lastUpdate }, country }) => {
 
-const pourcentage = recovered.value/confirmed.value;
-const data= [{
-    value : pourcentage
-}];
+	if (!confirmed) {
+		return "Loading...";
+	}
 
-const graphique = (
-    
+	const pourcentage = recovered.value / confirmed.value;
+	const data = [{
+		value: pourcentage
+	}];
+
+	const graphique = (
+
 		(<Chart
 			height={500}
-            data={data}
-            
-			padding={[200,0, 520, 0]}
+			data={data}
+
+			padding={[200, 0, 520, 0]}
 			scale={{
 				value: {
 					min: 0,
@@ -125,7 +127,7 @@ const graphique = (
 			/>
 			<Annotation.Text
 				position={['50%', '85%']}
-				
+
 				style={{
 					fontSize: 20,
 					fill: '#545454',
@@ -143,21 +145,21 @@ const graphique = (
 				offsetY={15}
 			/>
 		</Chart>)
-    )
-    return (
-        
-            <div className="moteurG">
-                <h3>Rétablis</h3>
-				<p1>{new Date(lastUpdate).toDateString()}</p1>
-                <p><CountUp start={0} end={recovered.value} duration={4} separator="," /></p>
-                {country ? graphique : graphique }
-                
-                
-            </div>
-            
-    
-       
-     )
+	)
+	return (
+
+		<div className="moteurG">
+			<h3>Rétablis</h3>
+			<p1>{new Date(lastUpdate).toDateString()}</p1>
+			<p><CountUp start={0} end={recovered.value} duration={4} separator="," /></p>
+			{country ? graphique : graphique}
+
+
+		</div>
+
+
+
+	)
 }
 
 

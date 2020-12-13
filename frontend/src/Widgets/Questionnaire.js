@@ -121,7 +121,7 @@ class Questionnaire extends React.Component {
 
                 <form>
                     <label>Votre âge :
-                    <input type="number" min="0" placeholder='0-120 ans' name="age" onChange={this.handleInputChange}/>
+                    <input type="number" min="0"  placeholder='0-120 ans' name="age" onChange={this.handleInputChange}/>
                     </label>
                 </form> 
                 <form>

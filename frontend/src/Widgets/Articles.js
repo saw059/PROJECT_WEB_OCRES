@@ -1,10 +1,7 @@
-//Widget sur les articles concernant la COVID-19
-
 import React from 'react';
 import '../Widgets/Articles.css';
-import pp1 from '../images/pp1.jfif';
-import pp2 from '../images/pp2.jfif';
-import pp3 from '../images/pp3.jpg';
+
+import axios from 'axios';
 
 
 import { CardContent, Grid } from '@material-ui/core';
@@ -12,17 +9,7 @@ import { CardContent, Grid } from '@material-ui/core';
 
 //Objet contenant les infos des articles
 
-const articles = [
-    {
-        nom: "Covid-19 : morts en baisse", contenu: "340 morts du virus lors des dernières 24 heures à l'hôpital", date: "il y a 3 heures", pp: pp1,
-     },
-    {
-        nom: "Lutte contre le VIH", contenu: "La Covid-19 pourrait provoquer jusqu'à 150.000 décès supplémentaires en trois ans", date: "il y a 1 jour", pp: pp2,
-     },
-     {
-        nom: "Baromètre du coronavirus en Ile-DeFrance:", contenu: "Point au 24 novembre", date: "il y a 3 jours", pp: pp3,
-     },
-];
+
 
 //Partie principale
 
@@ -31,11 +18,30 @@ class Articles extends React.Component {
      //constructor
      constructor(props){
         super(props);
-        this.state = { numero: 0 };   
-    }
+        this.state = { numero: 0 ,
+        
+        articles:[
+                {
+                    nom:'',
+                    contenu:'',
+                    image:'',
+                    date:''
+                }
+            
+            ]
+    
+            
+    
+        }
+    };
+        
+        
+    
+    
 
     handleClick() {
-        if (this.state.numero>1) {
+        
+        if (this.state.numero> this.state.articles.length-2)  {
             this.setState({numero: 0});
         }
         else {
@@ -43,28 +49,53 @@ class Articles extends React.Component {
         }
     }
 
+    async componentDidMount(){
+        try{
+           axios.get("http://localhost:5003/articles")
+          .then( response => {
+            console.log(response);
+            this.setState({articles:response.data})
+            
+          
+            
+            
+            }
+            
+          )
+          console.log(this.state.allNote)
+            console.log(this.state.allNote.length)
+          .catch(err => {
+            console.log(err)
+          })
+        }catch(err){
+          console.log(err);
+        }
+        
+        
+      
+      }
+
     //Affiche un article
     Article() {
+        const {articles} = this.state;
+        const url= articles[this.state.numero].image;
+
         return(
+
             <Grid item className="UnArticle" xs={6} >
           <CardContent>
     
                 <div className="image">
-                    <img className ="imageArticle" src={articles[this.state.numero].pp} alt={articles[this.state.numero].nom}></img>
+                    <img className ="imageArticle" src={url} alt={articles[this.state.numero].nom}></img>
                 </div>
                 <div className="texte .d-md-none d-lg-block ">
                     <h3 className ="Nom">{articles[this.state.numero].nom}</h3>
                     <p className ="Contenu">{articles[this.state.numero].contenu}</p>
-                    <p className ="Date">{articles[this.state.numero].date}</p>
+                    <p className ="Date">{new Date(articles[this.state.numero].date).toDateString()}</p>
                     
                 </div>
                 <button className="boutonNew" type="button" onClick={ () => this.handleClick()}> Changer d'article </button>
-                
-                
-                
-            
-
-
+    
           </CardContent>
           </Grid>
 

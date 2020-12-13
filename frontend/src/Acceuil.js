@@ -11,10 +11,6 @@ import MoteurM from './Widgets/MoteurM';
 import Moteur from './Widgets/Moteur';
 import { Grid } from '@material-ui/core';
 
-
-
-
-
 import Graph2 from './Widgets/Graph2';
 import Comparaison from './Widgets/Comparaison';
 import Footer from './components/plan/Footer';

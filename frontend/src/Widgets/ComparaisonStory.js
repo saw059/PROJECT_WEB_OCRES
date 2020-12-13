@@ -1,5 +1,5 @@
 import React from 'react';
-import './Discours.css'
+import './Comparaisonn.css'
 
 
 
